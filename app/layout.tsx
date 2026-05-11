@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Valaiyam - Premium Business Websites Built Fast',
   description: 'Modern, AI-assisted business websites for small businesses, startups, and professionals. Fast delivery, premium quality, affordable pricing.',
   keywords: 'business website, web development, website design, small business, startup website, India',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Valaiyam - Premium Business Websites Built Fast',
     description: 'Modern, AI-assisted business websites for small businesses, startups, and professionals.',

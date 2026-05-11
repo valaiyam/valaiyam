@@ -9,12 +9,12 @@ export const metadata = {
 
 export default function Portfolio() {
   const projects = [
-    { name: 'Healthcare Clinic', category: 'Business Website', tech: 'Next.js, Tailwind' },
-    { name: 'Consulting Firm', category: 'Corporate Website', tech: 'Next.js, Tailwind' },
-    { name: 'Restaurant', category: 'Business Website', tech: 'Next.js, Tailwind' },
-    { name: 'Educational Institute', category: 'Website + Portal', tech: 'Next.js, Tailwind' },
-    { name: 'Startup Landing', category: 'Landing Page', tech: 'Next.js, Tailwind' },
-    { name: 'Professional Portfolio', category: 'Portfolio Site', tech: 'Next.js, Tailwind' },
+    { name: 'Doraemon Playschool', category: 'Business Website', tech: 'Next.js, Tailwind', url: 'https://doraemonplayschool.in/' },
+    { name: 'Consulting Firm', category: 'Corporate Website', tech: 'Next.js, Tailwind', url: '' },
+    { name: 'Restaurant', category: 'Business Website', tech: 'Next.js, Tailwind', url: '' },
+    { name: 'Educational Institute', category: 'Website + Portal', tech: 'Next.js, Tailwind', url: '' },
+    { name: 'Startup Landing', category: 'Landing Page', tech: 'Next.js, Tailwind', url: '' },
+    { name: 'Professional Portfolio', category: 'Portfolio Site', tech: 'Next.js, Tailwind', url: '' },
   ]
 
   return (
@@ -31,9 +31,17 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-8">
               {projects.map((project, i) => (
                 <div key={i} className="group cursor-pointer">
-                  <div className="bg-secondary aspect-video rounded-lg mb-4 flex items-center justify-center border border-white/10 group-hover:border-accent/50 transition">
-                    <span className="text-muted">Coming Soon</span>
-                  </div>
+                  {project.url ? (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">
+                      <div className="bg-secondary aspect-video rounded-lg mb-4 flex items-center justify-center border border-white/10 group-hover:border-accent/50 transition">
+                        <span className="text-muted">View Live →</span>
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="bg-secondary aspect-video rounded-lg mb-4 flex items-center justify-center border border-white/10 group-hover:border-accent/50 transition">
+                      <span className="text-muted">Coming Soon</span>
+                    </div>
+                  )}
                   <h3 className="font-semibold mb-2">{project.name}</h3>
                   <p className="text-sm text-muted mb-1">{project.category}</p>
                   <p className="text-xs text-muted">{project.tech}</p>
