@@ -20,24 +20,24 @@ export default function Home() {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl opacity-50" />
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-              Premium Websites Built to<br /><span className="text-gradient">Grow Your Business</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
+              Your First Professional Website<br /><span className="text-gradient">₹9,999</span>
             </h1>
             <p className="text-xl text-muted max-w-2xl mx-auto mb-8 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              Modern, fast, conversion-focused websites for businesses that want more leads, more trust, and faster growth.
+              Perfect for businesses starting online. No agency fees. No 3-month waits. Just simple, fast websites.
             </p>
             <div className="flex gap-4 justify-center flex-wrap animate-fade-in-up mb-8" style={{animationDelay: '0.2s'}}>
-              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all text-lg font-semibold hover:scale-105 hover:shadow-2xl hover:shadow-accent/50">
-                Book Free Consultation
+              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all text-lg font-semibold hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 text-white">
+                Start Your Project
               </Link>
-              <Link href="/portfolio" className="glass glass-hover px-8 py-4 rounded-lg transition-all text-lg font-semibold hover:scale-105">
-                See Live Demos
+              <Link href="/estimate" className="glass glass-hover px-8 py-4 rounded-lg transition-all text-lg font-semibold hover:scale-105">
+                Estimate Cost
               </Link>
             </div>
             
-            {/* Launch Guarantee Badge */}
+            {/* Solo Developer Badge */}
             <div className="glass inline-block px-6 py-3 rounded-full animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <p className="text-sm"><span className="text-accent font-semibold">Launch Guarantee:</span> Draft in 72 hours • Website live in 7 days</p>
+              <p className="text-sm"><span className="text-accent font-semibold">Small team. Focused attention.</span> Not an agency. Just quality work.</p>
             </div>
           </div>
         </section>
@@ -45,19 +45,46 @@ export default function Home() {
         {/* Trust Metrics */}
         <section className="py-12 px-6">
           <div className="max-w-7xl mx-auto">
-            {/* Free Offer Highlight */}
-            <div className="glass border-accent p-8 rounded-2xl mb-12 scroll-fade text-center">
-              <div className="inline-block bg-accent px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                INTRODUCTORY OFFER
+            {/* Perfect for Beginners Section */}
+            <div className="glass border-accent p-8 rounded-2xl mb-12 scroll-fade">
+              <h3 className="text-2xl font-bold mb-6 text-center">Perfect for Businesses Just Starting Online</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>No technical knowledge needed</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>We handle everything from start to finish</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>Launch in 7 days guaranteed</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>Affordable, transparent pricing</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>Ongoing support included</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>30-day satisfaction guarantee</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-3xl font-bold mb-3">Get Your Website FREE</h3>
-              <p className="text-lg text-muted mb-4">
-                We're offering 5 FREE professional websites for individual businesses, startups, and small businesses
+              <p className="text-center text-muted mt-6 italic">
+                We're not a big agency with big fees. We're a small team that builds fast, professional websites for businesses like yours.
               </p>
-              <Link href="/contact" className="inline-block bg-accent px-8 py-3 rounded-lg hover:bg-blue-600 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 font-semibold">
-                Claim Your Free Website
-              </Link>
-              <p className="text-xs text-muted mt-4">*T&C Apply - Domain registration fee to be paid by client</p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 scroll-fade">
@@ -125,8 +152,8 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Doraemon Playschool', category: 'Educational Website', url: 'https://doraemonplayschool.in/' },
-                { name: 'Coming Soon', category: 'Restaurant Website', url: '' },
-                { name: 'Coming Soon', category: 'Consultant Portfolio', url: '' },
+                { name: 'Valaiyam Website', category: 'Business Website', url: 'https://valaiyam.com' },
+                { name: 'Design Concepts', category: 'Industry Mockups', url: '' },
               ].map((project, i) => (
                 <div key={i} className="group scroll-fade" style={{animationDelay: `${i * 0.1}s`}}>
                   {project.url ? (
@@ -136,14 +163,23 @@ export default function Home() {
                       </div>
                     </a>
                   ) : (
-                    <div className="glass aspect-video rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-muted">Coming Soon</span>
+                    <div className="glass glass-hover aspect-video rounded-lg mb-4 flex items-center justify-center transition-all group-hover:scale-105">
+                      <span className="text-accent font-semibold">View Designs →</span>
                     </div>
                   )}
                   <h3 className="font-semibold mb-2">{project.name}</h3>
                   <p className="text-sm text-muted">{project.category}</p>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-8 text-center scroll-fade">
+              <p className="text-sm text-muted mb-4">
+                Just starting out? So are we! We're building our portfolio and offering special rates to our first clients.
+              </p>
+              <Link href="/contact" className="inline-block text-accent hover:underline font-medium">
+                Be our next success story →
+              </Link>
             </div>
             <div className="text-center mt-12 scroll-fade">
               <Link href="/portfolio" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all inline-block hover:scale-105 hover:shadow-2xl hover:shadow-accent/50">
@@ -186,51 +222,68 @@ export default function Home() {
               {[
                 { 
                   name: 'Starter', 
-                  price: '₹9,999', 
-                  features: ['5 pages', 'Mobile responsive', 'Contact form', 'SEO setup', '7-day launch'],
-                  best: ''
-                },
-                { 
-                  name: 'Business', 
-                  price: '₹19,999', 
-                  features: ['Custom design', 'WhatsApp integration', 'Analytics', 'Premium animations', '14-day support'],
-                  best: 'Most Popular',
+                  price: '₹4,999', 
+                  perfectFor: 'Solo consultants, small local businesses',
+                  features: ['3 pages', 'Mobile responsive', 'Contact form', '7-day delivery', '30-day support'],
+                  notIncluded: ['No custom design', 'Basic support only'],
+                  best: 'Introductory Rate',
                   popular: true
                 },
                 { 
+                  name: 'Standard', 
+                  price: '₹9,999', 
+                  perfectFor: 'Growing businesses, startups',
+                  features: ['5 pages', 'Custom design', 'WhatsApp integration', 'Google Analytics', '2 revision rounds'],
+                  notIncluded: ['No advanced animations', 'Standard support'],
+                  best: ''
+                },
+                { 
                   name: 'Premium', 
-                  price: '₹39,999', 
-                  features: ['Strategy consultation', 'Custom conversion copy', 'Advanced integrations', 'Priority support'],
+                  price: '₹14,999', 
+                  perfectFor: 'Established businesses',
+                  features: ['8 pages', 'Advanced features', 'Priority support', 'Blog/CMS', '90-day maintenance'],
+                  notIncluded: ['No enterprise features', 'Limited custom development'],
                   best: ''
                 },
               ].map((plan, i) => (
                 <div key={i} className={`glass glass-hover p-8 rounded-lg transition-all scroll-fade hover:scale-105 relative ${plan.popular ? 'border-accent' : ''}`} style={{animationDelay: `${i * 0.1}s`}}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent px-4 py-1 rounded-full text-sm">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent px-4 py-1 rounded-full text-sm text-white">
                       {plan.best}
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold mb-2">{plan.name}</h3>
-                  <p className="text-4xl font-bold mb-6">{plan.price}</p>
-                  <ul className="space-y-3 mb-8">
+                  <p className="text-4xl font-bold mb-2">{plan.price}</p>
+                  <p className="text-sm text-muted mb-4">{plan.perfectFor}</p>
+                  <ul className="space-y-3 mb-4">
                     {plan.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-2 text-muted">
+                      <li key={j} className="flex items-start gap-2 text-sm">
                         <span className="text-accent mt-1">✓</span>
-                        <span className="text-sm">{f}</span>
+                        <span>{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className="block text-center border border-accent px-6 py-3 rounded-lg hover:bg-accent transition-all hover:scale-105">
+                  {plan.notIncluded.length > 0 && (
+                    <ul className="space-y-2 mb-6">
+                      {plan.notIncluded.map((f, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-muted">
+                          <span className="mt-1">✗</span>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <Link href="/contact" className="block text-center border border-accent px-6 py-3 rounded-lg hover:bg-accent transition-all hover:scale-105 text-white">
                     Get Started
                   </Link>
                 </div>
               ))}
             </div>
             <div className="text-center mt-12 scroll-fade">
-              <Link href="/estimate" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all inline-block mr-4 hover:scale-105 hover:shadow-2xl hover:shadow-accent/50">
-                Estimate Your Project
+              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all inline-block mr-4 hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 text-white">
+                Book Free Consultation
               </Link>
-              <Link href="/pricing" className="text-accent hover:underline hover:scale-105 inline-block transition-transform">View Detailed Pricing →</Link>
+              <Link href="/pricing" className="text-accent hover:underline hover:scale-105 inline-block transition-transform">View All Plans →</Link>
             </div>
           </div>
         </section>

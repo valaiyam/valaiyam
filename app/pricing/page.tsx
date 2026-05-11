@@ -11,52 +11,61 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Starter',
-      price: '₹9,999',
-      desc: 'Perfect for small businesses getting started online',
+      price: '₹4,999',
+      desc: 'Perfect for solo consultants & small local businesses',
+      perfectFor: 'Just starting online, need basic presence',
       features: [
-        'Up to 5 Pages',
+        '3 Pages Included',
         'Mobile Responsive Design',
         'Contact Form',
         'Basic SEO Setup',
-        'Google Maps Integration',
-        'Social Media Links',
-        '7-Day Delivery',
+        '7-Day Delivery Guarantee',
         '30-Day Support',
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '₹19,999',
-      desc: 'Ideal for growing businesses that need more features',
-      features: [
-        'Up to 10 Pages',
-        'Premium Custom Design',
-        'WhatsApp Integration',
-        'Advanced SEO Optimization',
-        'Google Analytics Setup',
-        'Portfolio/Gallery Section',
-        'FAQ Section',
-        'Testimonials Carousel',
-        '7-Day Delivery',
-        '60-Day Support',
+      ],
+      notIncluded: [
+        'No custom design',
+        'Basic support only',
+        'No advanced features',
       ],
       popular: true
     },
     {
-      name: 'Premium',
-      price: '₹39,999',
-      desc: 'Complete solution for established businesses',
+      name: 'Standard',
+      price: '₹9,999',
+      desc: 'Ideal for growing businesses & startups',
+      perfectFor: 'Need professional design & more features',
       features: [
-        'Unlimited Pages',
-        'Fully Custom Features',
-        'Advanced Animations',
-        'Full SEO Suite',
-        'Performance Optimization',
-        'Blog Setup',
-        'Email Integration',
+        '5 Pages Included',
+        'Custom Design',
+        'WhatsApp Integration',
+        'Google Analytics Setup',
+        '2 Revision Rounds',
+        '7-Day Delivery',
+        '30-Day Support',
+      ],
+      notIncluded: [
+        'No advanced animations',
+        'Standard support',
+        'No blog/CMS',
+      ]
+    },
+    {
+      name: 'Premium',
+      price: '₹14,999',
+      desc: 'Complete solution for established businesses',
+      perfectFor: 'Need advanced features & priority support',
+      features: [
+        '8 Pages Included',
+        'Advanced Features',
         'Priority Support',
-        '10-Day Delivery',
+        'Blog/CMS Integration',
+        'Custom Animations',
+        '7-Day Delivery',
         '90-Day Maintenance',
+      ],
+      notIncluded: [
+        'No enterprise features',
+        'Limited custom development',
       ]
     },
   ]
@@ -74,24 +83,34 @@ export default function Pricing() {
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {plans.map((plan, i) => (
-                <div key={i} className={`border ${plan.popular ? 'border-accent' : 'border-white/10'} p-8 rounded-lg hover:border-accent/50 transition relative`}>
+                <div key={i} className={`glass glass-hover ${plan.popular ? 'border-accent' : ''} p-8 rounded-lg transition-all hover:scale-105 relative`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent px-4 py-1 rounded-full text-sm">
-                      Most Popular
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent px-4 py-1 rounded-full text-sm text-white">
+                      Introductory Rate
                     </div>
                   )}
                   <h2 className="text-2xl font-semibold mb-2">{plan.name}</h2>
-                  <p className="text-4xl font-bold mb-4">{plan.price}</p>
-                  <p className="text-muted text-sm mb-6">{plan.desc}</p>
-                  <ul className="space-y-3 mb-8">
+                  <p className="text-4xl font-bold mb-2">{plan.price}</p>
+                  <p className="text-sm text-muted mb-4">{plan.perfectFor}</p>
+                  <ul className="space-y-3 mb-4">
                     {plan.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-muted">
+                      <li key={j} className="flex items-start gap-2 text-sm">
                         <span className="text-accent mt-1">✓</span>
                         <span>{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`block text-center px-6 py-3 rounded-lg transition ${plan.popular ? 'bg-accent hover:bg-blue-600' : 'border border-accent hover:bg-accent'}`}>
+                  {plan.notIncluded && plan.notIncluded.length > 0 && (
+                    <ul className="space-y-2 mb-6">
+                      {plan.notIncluded.map((f, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-muted">
+                          <span className="mt-1">✗</span>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <Link href="/contact" className={`block text-center px-6 py-3 rounded-lg transition-all ${plan.popular ? 'bg-accent hover:bg-blue-600 text-white' : 'border border-accent hover:bg-accent text-white'}`}>
                     Get Started
                   </Link>
                 </div>

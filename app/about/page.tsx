@@ -21,79 +21,74 @@ export default function About() {
 
             <div className="space-y-12">
               <div>
-                <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+                <h2 className="text-3xl font-bold mb-4">Our Story</h2>
                 <p className="text-muted leading-relaxed">
-                  Valaiyam exists to help small businesses, startups, and professionals establish a powerful digital presence. We believe every business deserves a premium website that builds trust, attracts customers, and drives growth—without the traditional agency price tag or timeline.
+                  We started Valaiyam because we saw small businesses paying too much and waiting too long for basic websites. Traditional agencies charge ₹50,000+ and take 1-3 months for what should be a simple, fast process.
+                </p>
+                <p className="text-muted leading-relaxed mt-4">
+                  As a small, focused team, we deliver professional websites faster and more affordably. No big teams. No overhead. No endless revisions. Just quality work at fair prices.
+                </p>
+                <p className="text-muted leading-relaxed mt-4">
+                  We're currently accepting our first clients at special introductory rates as we build our portfolio.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold mb-4">How We're Different</h2>
-                <p className="text-muted leading-relaxed mb-6">
-                  We combine AI-assisted rapid development with professional engineering quality. This unique approach allows us to deliver premium websites faster and more affordably than traditional agencies, without compromising on quality or performance.
-                </p>
+                <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="border border-white/10 p-6 rounded-lg">
+                  <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
+                    <h3 className="font-semibold mb-2">Small Team</h3>
+                    <p className="text-sm text-muted">Focused attention, not agency bureaucracy</p>
+                  </div>
+                  <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
                     <h3 className="font-semibold mb-2">Fast Delivery</h3>
-                    <p className="text-sm text-muted">7-10 day turnaround for most projects</p>
+                    <p className="text-sm text-muted">7-day launch guarantee for most projects</p>
                   </div>
-                  <div className="border border-white/10 p-6 rounded-lg">
-                    <h3 className="font-semibold mb-2">Premium Quality</h3>
-                    <p className="text-sm text-muted">Modern tech stack and clean code</p>
-                  </div>
-                  <div className="border border-white/10 p-6 rounded-lg">
-                    <h3 className="font-semibold mb-2">Affordable Pricing</h3>
-                    <p className="text-sm text-muted">Transparent pricing from ₹9,999</p>
+                  <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
+                    <h3 className="font-semibold mb-2">Fair Pricing</h3>
+                    <p className="text-sm text-muted">Transparent pricing from ₹4,999</p>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold mb-4">Our Process</h2>
-                <div className="space-y-4">
+                <h2 className="text-3xl font-bold mb-4">Simple 4-Step Process</h2>
+                <div className="grid md:grid-cols-4 gap-6">
                   {[
-                    { step: '1', title: 'Discovery', desc: 'We understand your business, goals, and target audience' },
-                    { step: '2', title: 'Design', desc: 'Create a modern, conversion-focused design tailored to your brand' },
-                    { step: '3', title: 'Development', desc: 'Build your website with clean code and best practices' },
-                    { step: '4', title: 'Launch', desc: 'Deploy your website and provide training and support' },
+                    { step: '1', title: 'Free Consultation', desc: '15-minute call to discuss your needs' },
+                    { step: '2', title: 'Design & Approval', desc: 'We design, you approve within 48 hours' },
+                    { step: '3', title: 'Development', desc: 'We build your website in 5 days' },
+                    { step: '4', title: 'Launch & Support', desc: 'Go live + 30 days of support included' },
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-4 items-start border border-white/10 p-6 rounded-lg">
-                      <div className="bg-accent w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    <div key={i} className="text-center">
+                      <div className="glass glass-hover w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent transition-all hover:scale-110">
                         {item.step}
                       </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">{item.title}</h3>
-                        <p className="text-sm text-muted">{item.desc}</p>
-                      </div>
+                      <h3 className="font-semibold mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted">{item.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
-                <ul className="space-y-3 text-muted">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span><strong className="text-white">Business-First Approach:</strong> We focus on outcomes that matter—leads, conversions, and growth</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span><strong className="text-white">Modern Technology:</strong> Built with Next.js, React, and Tailwind for speed and scalability</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span><strong className="text-white">Transparent Process:</strong> Clear pricing, timelines, and communication throughout</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span><strong className="text-white">Full Ownership:</strong> You get complete source code access and ownership</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span><strong className="text-white">Ongoing Support:</strong> Post-launch support and maintenance options available</span>
-                  </li>
-                </ul>
+                <h2 className="text-3xl font-bold mb-4">Our Guarantee</h2>
+                <div className="glass p-8 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4 text-center">30-Day Satisfaction Guarantee</h3>
+                  <p className="text-muted text-center mb-6">
+                    If you're not completely satisfied with your website within 30 days of launch, we'll fix it or refund your money.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-accent mb-2">7 Days</div>
+                      <div className="text-sm text-muted">Website launch guarantee</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-accent mb-2">30 Days</div>
+                      <div className="text-sm text-muted">Money-back guarantee</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
