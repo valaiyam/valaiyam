@@ -72,7 +72,7 @@ export default function Contact() {
                       className="w-full bg-secondary border border-white/10 rounded-lg px-4 py-3 focus:border-accent outline-none transition"
                     >
                       <option value="">Select a service</option>
-                      <option value="free">🎉 Free Website (Limited Offer)</option>
+                      <option value="free">Free Website (Limited Offer)</option>
                       <option value="business">Business Website</option>
                       <option value="landing">Landing Page</option>
                       <option value="portfolio">Portfolio Website</option>

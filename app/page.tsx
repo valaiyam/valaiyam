@@ -37,7 +37,7 @@ export default function Home() {
             
             {/* Launch Guarantee Badge */}
             <div className="glass inline-block px-6 py-3 rounded-full animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <p className="text-sm"><span className="text-accent font-semibold">⚡ Launch Guarantee:</span> Draft in 72 hours • Website live in 7 days</p>
+              <p className="text-sm"><span className="text-accent font-semibold">Launch Guarantee:</span> Draft in 72 hours • Website live in 7 days</p>
             </div>
           </div>
         </section>
@@ -48,7 +48,7 @@ export default function Home() {
             {/* Free Offer Highlight */}
             <div className="glass border-accent p-8 rounded-2xl mb-12 scroll-fade text-center">
               <div className="inline-block bg-accent px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                🎉 INTRODUCTORY OFFER
+                INTRODUCTORY OFFER
               </div>
               <h3 className="text-3xl font-bold mb-3">Get Your Website FREE</h3>
               <p className="text-lg text-muted mb-4">
@@ -62,13 +62,12 @@ export default function Home() {
 
             <div className="grid md:grid-cols-4 gap-6 scroll-fade">
               {[
-                { label: 'Fast Delivery', value: '7 Days', icon: '⚡' },
-                { label: 'Mobile-First', value: '100%', icon: '📱' },
-                { label: 'SEO-Ready', value: 'Built-in', icon: '🚀' },
-                { label: 'Founder Support', value: 'Direct', icon: '💬' },
+                { label: 'Fast Delivery', value: '7 Days' },
+                { label: 'Mobile-First', value: '100%' },
+                { label: 'SEO-Ready', value: 'Built-in' },
+                { label: 'Founder Support', value: 'Direct' },
               ].map((metric, i) => (
                 <div key={i} className="glass glass-hover p-6 rounded-lg text-center transition-all hover:scale-105">
-                  <div className="text-3xl mb-2">{metric.icon}</div>
                   <div className="text-2xl font-bold text-accent mb-1">{metric.value}</div>
                   <div className="text-sm text-muted">{metric.label}</div>
                 </div>
@@ -84,13 +83,12 @@ export default function Home() {
             <p className="text-center text-muted mb-12 scroll-fade">Your 24/7 business growth engine</p>
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                { title: 'Capture Leads Automatically', desc: 'Contact forms and WhatsApp integration turn visitors into customers', icon: '📧' },
-                { title: 'Build Instant Trust', desc: 'Professional design establishes credibility in seconds', icon: '⭐' },
-                { title: 'Turn Visitors Into Customers', desc: 'Conversion-focused design guides users to take action', icon: '💰' },
-                { title: 'Stay Open 24/7', desc: 'Your website never sleeps, never takes breaks', icon: '🌙' },
+                { title: 'Capture Leads Automatically', desc: 'Contact forms and WhatsApp integration turn visitors into customers' },
+                { title: 'Build Instant Trust', desc: 'Professional design establishes credibility in seconds' },
+                { title: 'Turn Visitors Into Customers', desc: 'Conversion-focused design guides users to take action' },
+                { title: 'Stay Open 24/7', desc: 'Your website never sleeps, never takes breaks' },
               ].map((benefit, i) => (
                 <div key={i} className="glass glass-hover p-6 rounded-lg transition-all scroll-fade hover:scale-105" style={{animationDelay: `${i * 0.1}s`}}>
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-sm text-muted">{benefit.desc}</p>
                 </div>
@@ -105,13 +103,12 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-center mb-12 scroll-fade">Why Valaiyam?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'AI-Assisted Speed', desc: 'Launch faster without sacrificing quality. Modern technology meets professional engineering.', icon: '⚡' },
-                { title: 'Engineer-Built Reliability', desc: 'Built with clean code and modern standards. No shortcuts, no template mess.', icon: '🛠️' },
-                { title: 'Conversion-First Design', desc: 'Every element designed to generate leads and grow your business.', icon: '🎯' },
-                { title: 'Ongoing Support', desc: 'We stay after launch. Direct founder support when you need it.', icon: '🤝' },
+                { title: 'AI-Assisted Speed', desc: 'Launch faster without sacrificing quality. Modern technology meets professional engineering.' },
+                { title: 'Engineer-Built Reliability', desc: 'Built with clean code and modern standards. No shortcuts, no template mess.' },
+                { title: 'Conversion-First Design', desc: 'Every element designed to generate leads and grow your business.' },
+                { title: 'Ongoing Support', desc: 'We stay after launch. Direct founder support when you need it.' },
               ].map((reason, i) => (
                 <div key={i} className="glass glass-hover p-8 rounded-lg transition-all scroll-fade hover:scale-105" style={{animationDelay: `${i * 0.1}s`}}>
-                  <div className="text-4xl mb-4">{reason.icon}</div>
                   <h3 className="text-2xl font-semibold mb-4">{reason.title}</h3>
                   <p className="text-muted">{reason.desc}</p>
                 </div>
@@ -245,16 +242,13 @@ export default function Home() {
               <h3 className="text-center text-xl font-semibold mb-6">Built With Professional Standards</h3>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
                 {[
-                  { label: 'SEO Optimized', icon: '🔍' },
-                  { label: 'Mobile Ready', icon: '📱' },
-                  { label: 'Lightning Fast', icon: '⚡' },
-                  { label: 'Secure SSL', icon: '🔒' },
-                  { label: 'Hosted on Vercel', icon: '☁️' },
+                  { label: 'SEO Optimized' },
+                  { label: 'Mobile Ready' },
+                  { label: 'Lightning Fast' },
+                  { label: 'Secure SSL' },
+                  { label: 'Hosted on Vercel' },
                 ].map((badge, i) => (
-                  <div key={i}>
-                    <div className="text-3xl mb-2">{badge.icon}</div>
-                    <div className="text-sm font-medium">{badge.label}</div>
-                  </div>
+                  <div key={i} className="text-sm font-medium">{badge.label}</div>
                 ))}
               </div>
             </div>
