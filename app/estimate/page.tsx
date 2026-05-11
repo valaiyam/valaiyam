@@ -11,7 +11,7 @@ export default function Estimate() {
     pages: '5',
     features: [] as string[],
     timeline: 'standard',
-    design: 'template',
+    design: 'professional',
   })
 
   const [estimate, setEstimate] = useState(0)
@@ -21,43 +21,40 @@ export default function Estimate() {
 
     // Base price by website type
     switch (formData.websiteType) {
-      case 'business':
-        basePrice = 15000
-        break
       case 'landing':
-        basePrice = 8000
+        basePrice = 7999
         break
       case 'portfolio':
-        basePrice = 12000
+        basePrice = 11999
+        break
+      case 'business':
+        basePrice = 17999
         break
       case 'ecommerce':
-        basePrice = 35000
+        basePrice = 34999
         break
       case 'custom':
-        basePrice = 25000
+        basePrice = 24999
         break
     }
 
-    // Pages cost
+    // Pages cost (first 5 included, then ₹800 per page)
     const pageCount = parseInt(formData.pages)
     if (pageCount > 5) {
-      basePrice += (pageCount - 5) * 1500
+      basePrice += (pageCount - 5) * 800
     }
 
     // Features cost
     const featureCosts: { [key: string]: number } = {
-      whatsapp: 0,
-      contact: 0,
-      maps: 0,
-      seo: 2000,
-      analytics: 1000,
-      blog: 5000,
-      booking: 8000,
-      payment: 10000,
-      cms: 7000,
-      multilingual: 6000,
-      animations: 3000,
-      chat: 4000,
+      seo: 1500,
+      analytics: 800,
+      blog: 3000,
+      booking: 5000,
+      payment: 6000,
+      cms: 4000,
+      multilingual: 3500,
+      animations: 2000,
+      chat: 1500,
     }
 
     formData.features.forEach(feature => {
@@ -65,17 +62,17 @@ export default function Estimate() {
     })
 
     // Timeline adjustment
-    if (formData.timeline === 'rush') {
-      basePrice *= 1.3 // 30% rush fee
+    if (formData.timeline === 'priority') {
+      basePrice *= 1.2 // 20% priority fee
     } else if (formData.timeline === 'flexible') {
       basePrice *= 0.9 // 10% discount
     }
 
     // Design complexity
-    if (formData.design === 'custom') {
-      basePrice += 8000
+    if (formData.design === 'signature') {
+      basePrice += 6500
     } else if (formData.design === 'premium') {
-      basePrice += 5000
+      basePrice += 3500
     }
 
     setEstimate(Math.round(basePrice))
@@ -97,7 +94,7 @@ export default function Estimate() {
   return (
     <>
       <Navbar />
-      <main className="pt-36">
+      <main className="pt-32">
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 text-center">Cost Estimator</h1>
@@ -113,11 +110,11 @@ export default function Estimate() {
                   <h3 className="text-xl font-semibold mb-4">Website Type</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { value: 'business', label: 'Business Website', base: '₹15,000' },
-                      { value: 'landing', label: 'Landing Page', base: '₹8,000' },
-                      { value: 'portfolio', label: 'Portfolio Site', base: '₹12,000' },
-                      { value: 'ecommerce', label: 'E-commerce', base: '₹35,000' },
-                      { value: 'custom', label: 'Custom Solution', base: '₹25,000' },
+                      { value: 'landing', label: 'Landing Page', base: '₹7,999' },
+                      { value: 'portfolio', label: 'Portfolio Site', base: '₹11,999' },
+                      { value: 'business', label: 'Business Website', base: '₹17,999' },
+                      { value: 'ecommerce', label: 'E-commerce', base: '₹34,999' },
+                      { value: 'custom', label: 'Custom Web Solution', base: '₹24,999+' },
                     ].map(type => (
                       <button
                         key={type.value}
@@ -151,26 +148,38 @@ export default function Estimate() {
                     <span className="text-white font-semibold">{formData.pages} pages</span>
                     <span>20 pages</span>
                   </div>
-                  <p className="text-xs text-muted mt-2">+₹1,500 per page after 5 pages</p>
+                  <p className="text-xs text-muted mt-2">1-5 pages included • +₹800 per additional page</p>
                 </div>
 
                 {/* Features */}
                 <div className="border border-white/10 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4">Features</h3>
+                  
+                  {/* Always Included */}
+                  <div className="mb-6 p-4 bg-accent/10 rounded-lg border border-accent/30">
+                    <p className="text-sm font-semibold mb-3 text-accent">Always Included (Free)</p>
+                    <div className="grid grid-cols-2 gap-2 text-xs text-muted">
+                      <p>✓ WhatsApp Button</p>
+                      <p>✓ Contact Form</p>
+                      <p>✓ Google Maps</p>
+                      <p>✓ Mobile Responsive</p>
+                      <p>✓ Basic SEO</p>
+                      <p>✓ SSL Setup</p>
+                    </div>
+                  </div>
+
+                  <p className="text-sm font-semibold mb-3">Premium Add-ons</p>
                   <div className="grid grid-cols-2 gap-3">
                     {[
-                      { value: 'whatsapp', label: 'WhatsApp Button', cost: 'Free' },
-                      { value: 'contact', label: 'Contact Form', cost: 'Free' },
-                      { value: 'maps', label: 'Google Maps', cost: 'Free' },
-                      { value: 'seo', label: 'Advanced SEO', cost: '+₹2,000' },
-                      { value: 'analytics', label: 'Analytics Setup', cost: '+₹1,000' },
-                      { value: 'blog', label: 'Blog System', cost: '+₹5,000' },
-                      { value: 'booking', label: 'Booking System', cost: '+₹8,000' },
-                      { value: 'payment', label: 'Payment Gateway', cost: '+₹10,000' },
-                      { value: 'cms', label: 'CMS Integration', cost: '+₹7,000' },
-                      { value: 'multilingual', label: 'Multi-language', cost: '+₹6,000' },
-                      { value: 'animations', label: 'Custom Animations', cost: '+₹3,000' },
-                      { value: 'chat', label: 'Live Chat', cost: '+₹4,000' },
+                      { value: 'seo', label: 'Advanced SEO Setup', cost: '+₹1,500' },
+                      { value: 'analytics', label: 'Analytics + Search Console', cost: '+₹800' },
+                      { value: 'blog', label: 'Blog CMS', cost: '+₹3,000' },
+                      { value: 'booking', label: 'Booking System', cost: '+₹5,000' },
+                      { value: 'payment', label: 'Payment Gateway', cost: '+₹6,000' },
+                      { value: 'cms', label: 'CMS Integration', cost: '+₹4,000' },
+                      { value: 'multilingual', label: 'Multi-language', cost: '+₹3,500' },
+                      { value: 'animations', label: 'Custom Animations', cost: '+₹2,000' },
+                      { value: 'chat', label: 'Live Chat', cost: '+₹1,500' },
                     ].map(feature => (
                       <button
                         key={feature.value}
@@ -193,9 +202,9 @@ export default function Estimate() {
                   <h3 className="text-xl font-semibold mb-4">Timeline</h3>
                   <div className="grid grid-cols-3 gap-4">
                     {[
-                      { value: 'rush', label: 'Rush (3-5 days)', modifier: '+30%' },
-                      { value: 'standard', label: 'Standard (7-10 days)', modifier: 'Standard' },
                       { value: 'flexible', label: 'Flexible (2-3 weeks)', modifier: '-10%' },
+                      { value: 'standard', label: 'Standard (7-10 days)', modifier: 'Included' },
+                      { value: 'priority', label: 'Priority (3-5 days)', modifier: '+20%' },
                     ].map(timeline => (
                       <button
                         key={timeline.value}
@@ -218,9 +227,9 @@ export default function Estimate() {
                   <h3 className="text-xl font-semibold mb-4">Design Complexity</h3>
                   <div className="grid grid-cols-3 gap-4">
                     {[
-                      { value: 'template', label: 'Template-based', cost: 'Included' },
-                      { value: 'premium', label: 'Premium Design', cost: '+₹5,000' },
-                      { value: 'custom', label: 'Fully Custom', cost: '+₹8,000' },
+                      { value: 'professional', label: 'Professional Template', cost: 'Included' },
+                      { value: 'premium', label: 'Premium Custom Design', cost: '+₹3,500' },
+                      { value: 'signature', label: 'Signature Fully Custom', cost: '+₹6,500' },
                     ].map(design => (
                       <button
                         key={design.value}
@@ -242,13 +251,13 @@ export default function Estimate() {
               {/* Estimate Summary */}
               <div className="md:col-span-1">
                 <div className="border border-accent p-6 rounded-lg sticky top-24 bg-secondary">
-                  <h3 className="text-xl font-semibold mb-4">Your Estimate</h3>
+                  <h3 className="text-xl font-semibold mb-4">Estimated Investment</h3>
                   
                   <div className="mb-6">
-                    <div className="text-5xl font-bold text-gradient mb-2">
-                      ₹{estimate.toLocaleString('en-IN')}
+                    <div className="text-4xl font-bold text-gradient mb-2">
+                      ₹{Math.round(estimate * 0.95).toLocaleString('en-IN')} - ₹{Math.round(estimate * 1.05).toLocaleString('en-IN')}
                     </div>
-                    <p className="text-sm text-muted">Estimated project cost</p>
+                    <p className="text-sm text-muted">Professional consultation estimate</p>
                   </div>
 
                   <div className="space-y-3 mb-6 text-sm">
@@ -261,7 +270,7 @@ export default function Estimate() {
                       <span>{formData.pages}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted">Features:</span>
+                      <span className="text-muted">Add-ons:</span>
                       <span>{formData.features.length}</span>
                     </div>
                     <div className="flex justify-between">
@@ -271,6 +280,19 @@ export default function Estimate() {
                     <div className="flex justify-between">
                       <span className="text-muted">Design:</span>
                       <span className="capitalize">{formData.design}</span>
+                    </div>
+                  </div>
+
+                  {/* What's Included */}
+                  <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                    <p className="text-sm font-semibold mb-3">Includes:</p>
+                    <div className="space-y-2 text-xs text-muted">
+                      <p>✓ Mobile responsive design</p>
+                      <p>✓ Fast Vercel deployment</p>
+                      <p>✓ SEO-ready setup</p>
+                      <p>✓ WhatsApp integration</p>
+                      <p>✓ 2 revision rounds</p>
+                      <p>✓ 14 days post-launch support</p>
                     </div>
                   </div>
 
@@ -289,11 +311,22 @@ export default function Estimate() {
                     </Link>
                   </div>
 
-                  <p className="text-xs text-muted mt-6">
-                    * This is an estimate. Final pricing may vary based on specific requirements. Contact us for a detailed quote.
+                  <p className="text-xs text-muted mt-6 text-center">
+                    Final pricing may vary based on specific requirements
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Not Sure Section */}
+            <div className="mt-16 text-center glass p-12 rounded-2xl">
+              <h3 className="text-3xl font-bold mb-4">Not Sure What You Need?</h3>
+              <p className="text-muted mb-8 max-w-2xl mx-auto">
+                Book a free 15-minute strategy call and we'll recommend the best package for your business goals.
+              </p>
+              <Link href="/contact" className="inline-block bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 font-semibold">
+                Book Free Consultation
+              </Link>
             </div>
           </div>
         </section>

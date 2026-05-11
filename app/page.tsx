@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-44 pb-20 px-6 relative overflow-hidden">
+        <section className="pt-40 pb-20 px-6 relative overflow-hidden">
           {/* Gradient Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none" />
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
