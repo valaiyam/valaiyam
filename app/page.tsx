@@ -16,8 +16,8 @@ export default function Home() {
         <section className="pt-40 pb-20 px-6 relative overflow-hidden">
           {/* Gradient Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none" />
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl opacity-50" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl opacity-50" />
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
@@ -255,27 +255,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Founder Section */}
-        <section className="py-20 px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass p-12 rounded-2xl scroll-fade text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl font-bold">
-                P
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Built by Pavithran</h3>
-              <p className="text-muted max-w-2xl mx-auto">
-                Combining engineering precision with modern web technology to help businesses grow online. Direct founder support on every project.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Free Offer CTA */}
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center glass p-12 rounded-2xl scroll-fade">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Get a Free Homepage Mockup</h2>
             <p className="text-xl text-muted mb-8">See how your website could look before committing. No obligation.</p>
-            <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all text-lg font-semibold inline-block hover:scale-105 hover:shadow-2xl hover:shadow-accent/50">
+            <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition-all text-lg font-semibold inline-block hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 text-white">
               Request Free Mockup
             </Link>
           </div>

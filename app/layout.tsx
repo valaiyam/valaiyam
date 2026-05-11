@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import PromoBanner from '@/components/PromoBanner'
+import { ThemeProvider } from '@/lib/ThemeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,11 +30,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <body className={inter.className}>
-        <PromoBanner />
-        {children}
-        <WhatsAppButton />
+        <ThemeProvider>
+          <PromoBanner />
+          {children}
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   )

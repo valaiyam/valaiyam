@@ -3,22 +3,76 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-primary: 255 255 255;
+    --bg-secondary: 249 250 251;
+    --text-primary: 17 24 39;
+    --text-muted: 107 114 128;
+    --border: 229 231 235;
+    --accent: 59 130 246;
+  }
+
+  .dark {
+    --bg-primary: 10 10 10;
+    --bg-secondary: 26 26 26;
+    --text-primary: 255 255 255;
+    --text-muted: 156 163 175;
+    --border: 255 255 255;
+    --accent: 59 130 246;
+  }
+
   body {
-    @apply bg-primary text-white antialiased;
+    @apply bg-primary text-primary antialiased transition-colors duration-300;
   }
 }
 
 @layer utilities {
+  .bg-primary {
+    background-color: rgb(var(--bg-primary));
+  }
+  
+  .bg-secondary {
+    background-color: rgb(var(--bg-secondary));
+  }
+  
+  .text-primary {
+    color: rgb(var(--text-primary));
+  }
+  
+  .text-muted {
+    color: rgb(var(--text-muted));
+  }
+  
+  .border-default {
+    border-color: rgb(var(--border) / 0.1);
+  }
+  
   .text-gradient {
     @apply bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
   }
   
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply backdrop-blur-xl border;
+  }
+  
+  .dark .glass {
+    @apply bg-white/5 border-white/10;
+  }
+  
+  .light .glass {
+    @apply bg-white/80 border-gray-200;
   }
   
   .glass-hover {
-    @apply hover:bg-white/10 hover:border-white/20;
+    @apply transition-all;
+  }
+  
+  .dark .glass-hover:hover {
+    @apply bg-white/10 border-white/20;
+  }
+  
+  .light .glass-hover:hover {
+    @apply bg-white border-gray-300;
   }
 }
 
