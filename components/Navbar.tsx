@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full glass backdrop-blur-2xl z-50 border-b">
+    <nav className="fixed top-12 w-full glass backdrop-blur-2xl z-50 border-b">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold flex items-center gap-2 hover:scale-105 transition-transform">
           <svg width="24" height="24" viewBox="0 0 32 32" fill="none">

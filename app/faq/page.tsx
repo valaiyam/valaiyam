@@ -11,7 +11,31 @@ export default function FAQ() {
   const faqs = [
     {
       q: 'How long does it take to build a website?',
-      a: 'Typically 7-10 days depending on the plan and complexity. Starter sites can be delivered in 7 days, while Premium projects may take up to 10 days.'
+      a: 'Draft delivered in 72 hours, website live in 7 days for standard projects. Rush delivery available in 3-5 days with priority support.'
+    },
+    {
+      q: 'Do I need technical knowledge to manage my website?',
+      a: 'No technical knowledge required. We provide documentation and a training session. For updates, we offer ongoing support packages.'
+    },
+    {
+      q: 'Do you buy the domain for me?',
+      a: 'We help you purchase and configure your domain. You maintain full ownership. We can guide you through the entire process.'
+    },
+    {
+      q: 'Can I update the website later myself?',
+      a: 'Yes, we provide full source code access and documentation. You can make updates yourself or use our maintenance packages.'
+    },
+    {
+      q: 'Do you provide support after launch?',
+      a: 'Yes! All plans include post-launch support (30-90 days depending on plan). After that, we offer maintenance packages or hourly rates.'
+    },
+    {
+      q: 'How many revisions do I get?',
+      a: 'Starter: 2 rounds, Professional: 3 rounds, Premium: unlimited revisions during development phase.'
+    },
+    {
+      q: 'What if I don\'t like the design?',
+      a: 'We show you the homepage design first for approval before building the full site. You can request changes during the revision rounds.'
     },
     {
       q: 'Do I own the website after it\'s built?',
@@ -22,30 +46,6 @@ export default function FAQ() {
       a: 'We use modern technologies like Next.js, React, and Tailwind CSS for fast, scalable, and maintainable websites.'
     },
     {
-      q: 'Can I update the website myself?',
-      a: 'Yes, we provide documentation and a training session. For non-technical updates, we offer maintenance packages.'
-    },
-    {
-      q: 'Do you provide hosting?',
-      a: 'We deploy your website on Vercel (free tier available) and help with domain setup. Hosting is included in the setup.'
-    },
-    {
-      q: 'What if I need changes after launch?',
-      a: 'All plans include post-launch support (30-90 days). After that, we offer maintenance packages or hourly rates.'
-    },
-    {
-      q: 'Do you offer SEO services?',
-      a: 'Yes, all websites include basic SEO setup. Professional and Premium plans include advanced SEO optimization.'
-    },
-    {
-      q: 'Can you redesign my existing website?',
-      a: 'Absolutely. We offer website redesign services to modernize your existing site with better design and performance.'
-    },
-    {
-      q: 'What payment methods do you accept?',
-      a: 'We accept bank transfers, UPI, and online payments. 50% upfront, 50% before launch.'
-    },
-    {
       q: 'Do you work with clients outside India?',
       a: 'Yes, we work with clients globally. All communication is remote via email, WhatsApp, and video calls.'
     },
@@ -54,7 +54,7 @@ export default function FAQ() {
   return (
     <>
       <Navbar />
-      <main className="pt-24">
+      <main className="pt-36">
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 text-center">Frequently Asked Questions</h1>
