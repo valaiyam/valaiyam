@@ -71,7 +71,7 @@ export default function Home() {
                   { icon: '🏪', title: 'Business', text: 'Kumar uploads logo, photos, prices' },
                   { icon: '💬', title: 'WhatsApp', text: 'Valai asks simple questions' },
                   { icon: '🌐', title: 'Website', text: 'Professional preview appears overnight' },
-                  { icon: '🧍‍♀️', title: 'Customer', text: 'Ananya finds you and contacts you' },
+                  { icon: '🧍‍♀️', title: 'Customer', text: 'Valai finds you and contacts you' },
                 ].map((item, i) => (
                   <div key={item.title} className="relative flex items-center gap-4 rounded-2xl bg-white/5 p-4 animate-flow-card" style={{animationDelay: `${i * 0.18}s`}}>
                     <div className="text-3xl w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">{item.icon}</div>
