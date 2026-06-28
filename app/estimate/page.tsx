@@ -23,7 +23,7 @@ export default function EstimateReplacement() {
               {[
                 ['1', 'Tell us your business'],
                 ['2', 'Send logo & photos'],
-                ['3', 'Preview overnight'],
+                ['3', 'Preview by next morning'],
                 ['4', 'Approve & go live'],
               ].map(([step, text]) => (
                 <div key={step} className="glass p-6 rounded-2xl">

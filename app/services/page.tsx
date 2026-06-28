@@ -27,25 +27,25 @@ export default function Services() {
     {
       title: 'Website Redesign',
       desc: 'Modernize your existing website with fresh design and improved performance.',
-      features: ['Modern UI/UX', 'Performance Boost', 'Mobile Optimization', 'SEO Improvement', 'Content Migration']
+      features: ['Fresh Design', 'Faster Pages', 'Mobile Friendly', 'Search Visibility', 'Content Migration']
     },
     {
       title: 'Domain + Deployment Setup',
-      desc: 'We help your business use its own domain and launch smoothly without technical confusion.',
-      features: ['Own Domain', 'Secure Website', 'Launch Setup', 'Email Guidance', 'No Tech Knowledge']
+      desc: 'We help your business use its own domain and launch smoothly.',
+      features: ['Own Domain', 'Secure Website', 'Launch Setup', 'Email Guidance', 'Ready to Share']
     },
     {
       title: 'SEO Optimization',
-      desc: 'Improve your search engine visibility with technical and on-page SEO.',
-      features: ['Keyword Research', 'Meta Optimization', 'Schema Markup', 'Performance Tuning', 'Local SEO']
+      desc: 'Improve your search visibility so nearby customers can find you more easily.',
+      features: ['Keyword Research', 'Clear Page Titles', 'Business Details', 'Faster Pages', 'Local SEO']
     },
     {
       title: 'Maintenance & Support',
-      desc: 'Ongoing website maintenance and technical support to keep your site running smoothly.',
+      desc: 'Ongoing website care to keep your site updated and running smoothly.',
       features: ['Regular Updates', 'Bug Fixes', 'Content Updates', 'Performance Monitoring', 'Priority Support']
     },
     {
-      title: 'Overnight Website Preview',
+      title: 'Next-Morning Website Preview',
       desc: 'Answer WhatsApp questions today and preview your homepage the next morning.',
       features: ['WhatsApp Questions', 'Upload Photos', 'Preview First', 'Request Changes', 'Pay After Approval']
     },

@@ -16,7 +16,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 text-center">About Valaiyam</h1>
             <p className="text-xl text-muted text-center mb-16">
-              We help local businesses get found, earn trust, and receive more enquiries—starting with a professional website delivered overnight.
+              We help local businesses get found, earn trust, and receive more enquiries, starting with a preview-first professional website.
             </p>
 
             <div className="space-y-12">
@@ -26,7 +26,7 @@ export default function About() {
                   We started Valaiyam because we saw small businesses paying too much and waiting too long for basic websites. Traditional agencies charge ₹50,000+ and take 1-3 months for what should be a simple, fast process.
                 </p>
                 <p className="text-muted leading-relaxed mt-4">
-                  As a small, focused team, we deliver professional websites faster and more affordably. No big teams. No overhead. No endless revisions. Just quality work at fair prices.
+                  As a small, focused team, we create professional websites faster and more affordably. No big teams. No overhead. No endless revisions. Just quality work at fair prices.
                 </p>
                 <p className="text-muted leading-relaxed mt-4">
                   We're currently accepting our first clients at special introductory rates as we build our portfolio.
@@ -41,8 +41,8 @@ export default function About() {
                     <p className="text-sm text-muted">Focused attention, not agency bureaucracy</p>
                   </div>
                   <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
-                    <h3 className="font-semibold mb-2">Fast Delivery</h3>
-                    <p className="text-sm text-muted">overnight homepage previews for most local businesses</p>
+                    <h3 className="font-semibold mb-2">Fast Preview</h3>
+                    <p className="text-sm text-muted">homepage previews usually available by the next morning</p>
                   </div>
                   <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
                     <h3 className="font-semibold mb-2">Fair Pricing</h3>
@@ -57,7 +57,7 @@ export default function About() {
                   {[
                     { step: '1', title: 'WhatsApp Questions', desc: 'Answer simple questions about your business' },
                     { step: '2', title: 'Preview & Approval', desc: 'Preview your homepage before paying the balance' },
-                    { step: '3', title: 'Overnight Build', desc: 'We assemble your website overnight' },
+                    { step: '3', title: 'Preview Preparation', desc: 'We prepare your first homepage preview' },
                     { step: '4', title: 'Go Live & Grow', desc: 'Go live + 30 days of support included' },
                   ].map((item, i) => (
                     <div key={i} className="text-center">

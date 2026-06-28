@@ -11,7 +11,7 @@ export default function FAQ() {
   const faqs = [
     { q: 'Can I use my own domain?', a: 'Yes. You can use your existing domain or we can guide you to buy one in your own name.' },
     { q: 'Who owns the website?', a: 'You own the website content, domain, and final approved website files after payment is completed.' },
-    { q: 'How long does it take?', a: 'For founding customers, we collect details on WhatsApp, build overnight, and share the first preview the next morning.' },
+    { q: 'How long does it take?', a: 'For founding customers, we collect details on WhatsApp and aim to share the first preview by the next morning.' },
     { q: 'Can I edit later?', a: 'Yes. You can request updates from us, and we can also set up simple editable sections depending on your needs.' },
     { q: 'Can I pay after preview?', a: 'Yes. Reserve your slot first, review the homepage preview, then pay the remaining amount only after approval.' },
     { q: 'Will it work on mobile?', a: 'Yes. Every Valaiyam website is designed mobile-first because most local customers search from phones.' },
