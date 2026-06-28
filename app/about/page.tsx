@@ -16,7 +16,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 text-center">About Valaiyam</h1>
             <p className="text-xl text-muted text-center mb-16">
-              Building premium digital experiences for businesses that want to grow.
+              We help local businesses get found, earn trust, and receive more enquiries—starting with a professional website delivered overnight.
             </p>
 
             <div className="space-y-12">
@@ -42,11 +42,11 @@ export default function About() {
                   </div>
                   <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
                     <h3 className="font-semibold mb-2">Fast Delivery</h3>
-                    <p className="text-sm text-muted">7-day launch guarantee for most projects</p>
+                    <p className="text-sm text-muted">overnight homepage previews for most local businesses</p>
                   </div>
                   <div className="glass glass-hover p-6 rounded-lg transition-all hover:scale-105">
                     <h3 className="font-semibold mb-2">Fair Pricing</h3>
-                    <p className="text-sm text-muted">Transparent pricing from ₹4,999</p>
+                    <p className="text-sm text-muted">preview first, pay after approval</p>
                   </div>
                 </div>
               </div>
@@ -55,10 +55,10 @@ export default function About() {
                 <h2 className="text-3xl font-bold mb-4">Simple 4-Step Process</h2>
                 <div className="grid md:grid-cols-4 gap-6">
                   {[
-                    { step: '1', title: 'Free Consultation', desc: '15-minute call to discuss your needs' },
-                    { step: '2', title: 'Design & Approval', desc: 'We design, you approve within 48 hours' },
-                    { step: '3', title: 'Development', desc: 'We build your website in 5 days' },
-                    { step: '4', title: 'Launch & Support', desc: 'Go live + 30 days of support included' },
+                    { step: '1', title: 'WhatsApp Questions', desc: 'Answer simple questions about your business' },
+                    { step: '2', title: 'Preview & Approval', desc: 'Preview your homepage before paying the balance' },
+                    { step: '3', title: 'Overnight Build', desc: 'We assemble your website overnight' },
+                    { step: '4', title: 'Go Live & Grow', desc: 'Go live + 30 days of support included' },
                   ].map((item, i) => (
                     <div key={i} className="text-center">
                       <div className="glass glass-hover w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent transition-all hover:scale-110">
@@ -95,8 +95,8 @@ export default function About() {
             <div className="mt-16 text-center bg-secondary p-12 rounded-lg">
               <h2 className="text-3xl font-bold mb-4">Ready to Work Together?</h2>
               <p className="text-muted mb-8">Let's build something amazing for your business.</p>
-              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition inline-block">
-                Start Your Project
+              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-brand-navy transition inline-block">
+                Build My Website
               </Link>
             </div>
           </div>

@@ -1,22 +1,20 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import PromoBanner from '@/components/PromoBanner'
 import { ThemeProvider } from '@/lib/ThemeContext'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Valaiyam - Premium Business Websites Built Fast',
-  description: 'Modern, AI-assisted business websites for small businesses, startups, and professionals. Fast delivery, premium quality, affordable pricing.',
-  keywords: 'business website, web development, website design, small business, startup website, India',
+  title: 'Valaiyam - Get Your Business Online Overnight',
+  description: 'Valaiyam helps local businesses get found, earn trust, and receive more enquiries with professional websites delivered overnight.',
+  keywords: 'local business website, WhatsApp orders, business website India, overnight website, small business website',
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: 'Valaiyam - Premium Business Websites Built Fast',
-    description: 'Modern, AI-assisted business websites for small businesses, startups, and professionals.',
+    title: 'Valaiyam - Get Your Business Online Overnight',
+    description: 'Professional local business websites delivered overnight with preview-first approval.',
     url: 'https://valaiyam.com',
     siteName: 'Valaiyam',
     locale: 'en_IN',
@@ -31,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth dark">
-      <body className={inter.className}>
+      <body>
         <ThemeProvider>
           <PromoBanner />
           {children}
