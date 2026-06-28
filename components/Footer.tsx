@@ -18,7 +18,7 @@ export default function Footer() {
             </svg>
             <span>Valaiyam<span className="text-brand-green">.</span><span className="text-brand-blue">com</span></span>
           </h3>
-          <p className="text-muted text-sm">Helping local businesses grow online overnight with websites that build trust and bring enquiries.</p>
+          <p className="text-muted text-sm">Helping local businesses grow online with websites that build trust and bring enquiries.</p>
         </div>
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>

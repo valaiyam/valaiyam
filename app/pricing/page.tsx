@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Pricing - Valaiyam',
-  description: 'Preview-first pricing for local business websites delivered overnight.',
+  description: 'Preview-first pricing for local business websites.',
 }
 
 export default function Pricing() {

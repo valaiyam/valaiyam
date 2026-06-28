@@ -41,9 +41,8 @@ export default function Home() {
               </h1>
               <div className="text-xl text-muted max-w-2xl mx-auto lg:mx-0 mb-8 animate-fade-in-up space-y-2" style={{animationDelay: '0.1s'}}>
                 <p>Professional business website.</p>
-                <p>Delivered overnight.</p>
+                <p>First preview can be ready overnight.</p>
                 <p>Preview before you pay.</p>
-                <p>No technical knowledge required.</p>
               </div>
               <div className="flex gap-4 justify-center lg:justify-start flex-wrap animate-fade-in-up mb-8" style={{animationDelay: '0.2s'}}>
                 <Link href={whatsappLink} className="bg-accent px-8 py-4 rounded-lg hover:bg-brand-navy transition-all text-lg font-semibold hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 text-white">
@@ -54,24 +53,36 @@ export default function Home() {
                 </Link>
               </div>
               <p className="text-sm text-muted animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                Helping local businesses get found, earn trust, and receive more enquiries—starting with an overnight website.
+                Helping local businesses get found, earn trust, and receive more enquiries, starting with a preview-first website.
               </p>
             </div>
 
             <div className="glass p-6 md:p-8 rounded-3xl animate-fade-in-up" style={{animationDelay: '0.15s'}}>
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <p className="text-sm text-muted">Animated customer flow</p>
-                  <h2 className="text-2xl font-bold">From search to WhatsApp enquiry</h2>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-7">
+                <div className="relative shrink-0" aria-hidden="true">
+                  <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-brand-blue via-brand-green to-brand-purple p-1 shadow-2xl shadow-accent/20 animate-pulse-soft">
+                    <div className="w-full h-full rounded-[1.35rem] bg-primary flex flex-col items-center justify-center gap-1">
+                      <div className="flex gap-2">
+                        <span className="w-3 h-3 rounded-full bg-brand-green" />
+                        <span className="w-3 h-3 rounded-full bg-brand-green" />
+                      </div>
+                      <div className="w-9 h-2 rounded-full bg-accent/70" />
+                    </div>
+                  </div>
+                  <div className="absolute -right-2 -bottom-2 w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-white shadow-lg">💬</div>
                 </div>
-                <div className="w-12 h-12 rounded-full bg-brand-green/20 flex items-center justify-center animate-pulse-soft">💬</div>
+                <div className="rounded-3xl rounded-tl-sm bg-white/10 p-5 border border-white/10">
+                  <p className="text-sm font-semibold text-accent mb-1">Hi, I&apos;m Valai</p>
+                  <h2 className="text-2xl font-bold mb-2">I turn your WhatsApp answers into a website preview.</h2>
+                  <p className="text-sm text-muted">Here&apos;s how I help a local business go from basic details to a customer enquiry.</p>
+                </div>
               </div>
               <div className="space-y-4">
                 {[
-                  { icon: '🏪', title: 'Business', text: 'Kumar uploads logo, photos, prices' },
-                  { icon: '💬', title: 'WhatsApp', text: 'Valai asks simple questions' },
-                  { icon: '🌐', title: 'Website', text: 'Professional preview appears overnight' },
-                  { icon: '🧍‍♀️', title: 'Customer', text: 'Ananya finds you and contacts you' },
+                  { icon: '🏪', title: 'Kumar shares business details', text: 'Logo, photos, prices, timings, and services.' },
+                  { icon: '💬', title: 'Valai guides the chat', text: 'I ask for the details customers look for before they contact you.' },
+                  { icon: '🌐', title: 'Your preview can be ready overnight', text: 'A professional homepage draft is prepared for your approval.' },
+                  { icon: '🧍‍♀️', title: 'Ananya finds you online', text: 'She checks your details and contacts you on WhatsApp.' },
                 ].map((item, i) => (
                   <div key={item.title} className="relative flex items-center gap-4 rounded-2xl bg-white/5 p-4 animate-flow-card" style={{animationDelay: `${i * 0.18}s`}}>
                     <div className="text-3xl w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">{item.icon}</div>
@@ -90,10 +101,10 @@ export default function Home() {
         <section className="py-12 px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6 scroll-fade">
             {[
-              { label: 'Projects Delivered', value: '12+' },
+              { label: 'Projects Completed', value: '12+' },
               { label: 'Cities Served', value: '4' },
               { label: 'Businesses Online', value: '10+' },
-              { label: 'Average Delivery Time', value: 'Overnight' },
+              { label: 'First Preview Time', value: 'Next morning' },
             ].map((metric) => (
               <div key={metric.label} className="glass glass-hover p-6 rounded-lg text-center transition-all hover:scale-105">
                 <div className="text-3xl font-bold text-accent mb-1">{metric.value}</div>
@@ -153,7 +164,7 @@ export default function Home() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-4 scroll-fade">Built for Real Business Results</h2>
-            <p className="text-center text-muted mb-12 scroll-fade">No tech jargon. Just what helps local customers choose you.</p>
+            <p className="text-center text-muted mb-12 scroll-fade">Simple pages, clear details, and WhatsApp buttons that help local customers choose you.</p>
             <div className="grid md:grid-cols-3 gap-6">
               {growthBenefits.map((benefit, i) => (
                 <div key={benefit} className="glass glass-hover p-6 rounded-lg transition-all scroll-fade hover:scale-105" style={{animationDelay: `${i * 0.08}s`}}>
@@ -172,12 +183,12 @@ export default function Home() {
 
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 scroll-fade">Overnight Process</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 scroll-fade">Preview-First Process</h2>
             <div className="grid md:grid-cols-5 gap-6">
               {[
                 { step: '1', title: 'Answer WhatsApp Questions', time: '10 minutes' },
                 { step: '2', title: 'Upload Logo & Photos', time: '15 minutes' },
-                { step: '3', title: 'We Build Overnight', time: '12–18 hours' },
+                { step: '3', title: 'We Prepare Your Preview', time: 'Target: next morning' },
                 { step: '4', title: 'Preview Website', time: 'Next morning' },
                 { step: '5', title: 'Go Live', time: 'Same day' },
               ].map((phase, i) => (
@@ -216,7 +227,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { before: 'No Website', after: 'Professional Website', industry: 'Playschool', time: '3 days', goal: 'Build parent trust' },
-                { before: 'Old Facebook Page', after: 'Mobile Website', industry: 'Restaurant', time: 'Overnight', goal: 'WhatsApp orders' },
+                { before: 'Old Facebook Page', after: 'Mobile Website', industry: 'Restaurant', time: 'Next-day preview', goal: 'WhatsApp orders' },
                 { before: 'Only Phone Calls', after: 'Search + WhatsApp', industry: 'Clinic', time: '2 days', goal: 'More appointments' },
               ].map((project, i) => (
                 <div key={project.industry} className="glass glass-hover p-6 rounded-2xl scroll-fade hover:scale-105 transition-all" style={{animationDelay: `${i * 0.1}s`}}>
@@ -258,7 +269,7 @@ export default function Home() {
             <div className="glass rounded-2xl overflow-hidden scroll-fade">
               {[
                 ['Traditional Agency', 'Weeks', 'Expensive', 'Meetings'],
-                ['Valaiyam', 'Overnight', 'Affordable', 'WhatsApp'],
+                ['Valaiyam', 'Preview first', 'Affordable', 'WhatsApp'],
               ].map((row, i) => (
                 <div key={row[0]} className={`grid grid-cols-4 gap-2 p-5 ${i === 1 ? 'bg-brand-green/10' : 'border-b border-white/10'}`}>
                   {row.map((cell) => <div key={cell} className="font-semibold text-sm md:text-base">{cell}</div>)}
@@ -286,7 +297,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-center mb-12 scroll-fade">What Early Customers Say</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { name: 'Priya S.', role: 'Boutique Owner', quote: 'Website ready overnight. Customers now order directly on WhatsApp.' },
+                { name: 'Priya S.', role: 'Boutique Owner', quote: 'The homepage preview was quick and clear. Customers now order directly on WhatsApp.' },
                 { name: 'Arun K.', role: 'Clinic Admin', quote: 'Patients can see timings and contact us without repeated phone calls.' },
                 { name: 'Meena R.', role: 'Home Baker', quote: 'The preview-first process made it easy to trust the team.' },
               ].map((t, i) => (
