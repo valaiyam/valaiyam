@@ -11,13 +11,13 @@ export default function Services() {
   const services = [
     {
       title: 'Business Website Development',
-      desc: 'Complete website solution for your business with modern design, mobile responsiveness, and conversion optimization.',
-      features: ['Custom Design', 'Mobile-First', 'SEO Optimized', 'Fast Loading', 'Contact Forms']
+      desc: 'A professional website that helps customers find you, trust you, and contact you on WhatsApp.',
+      features: ['Found on Google', 'Mobile-First', 'WhatsApp Enquiries', 'Professional Look', 'Open 24/7']
     },
     {
       title: 'Landing Page Design',
-      desc: 'High-converting landing pages designed to capture leads and drive business growth.',
-      features: ['Conversion Focus', 'A/B Testing Ready', 'Analytics Integration', 'Lead Capture', 'Fast Deployment']
+      desc: 'Focused pages for offers, menus, services, and promotions that turn visitors into enquiries.',
+      features: ['Clear Offer', 'WhatsApp CTA', 'Fast Loading', 'Lead Capture', 'Mobile Ready']
     },
     {
       title: 'Portfolio Websites',
@@ -31,8 +31,8 @@ export default function Services() {
     },
     {
       title: 'Domain + Deployment Setup',
-      desc: 'Complete technical setup including domain configuration and hosting deployment.',
-      features: ['Domain Setup', 'SSL Certificate', 'Vercel Deployment', 'DNS Configuration', 'Email Setup']
+      desc: 'We help your business use its own domain and launch smoothly without technical confusion.',
+      features: ['Own Domain', 'Secure Website', 'Launch Setup', 'Email Guidance', 'No Tech Knowledge']
     },
     {
       title: 'SEO Optimization',
@@ -45,9 +45,9 @@ export default function Services() {
       features: ['Regular Updates', 'Bug Fixes', 'Content Updates', 'Performance Monitoring', 'Priority Support']
     },
     {
-      title: 'AI-Assisted Rapid Delivery',
-      desc: 'Leverage AI-powered development for faster turnaround without compromising quality.',
-      features: ['Fast Delivery', 'Quality Code', 'Modern Stack', 'Best Practices', 'Professional Results']
+      title: 'Overnight Website Preview',
+      desc: 'Answer WhatsApp questions today and preview your homepage the next morning.',
+      features: ['WhatsApp Questions', 'Upload Photos', 'Preview First', 'Request Changes', 'Pay After Approval']
     },
   ]
 
@@ -79,10 +79,10 @@ export default function Services() {
             </div>
 
             <div className="mt-16 text-center bg-secondary p-12 rounded-lg">
-              <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-              <p className="text-muted mb-8">Let's discuss your project and find the right solution for your needs.</p>
-              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-blue-600 transition inline-block">
-                Book Free Consultation
+              <h2 className="text-3xl font-bold mb-4">Ready to Get Found?</h2>
+              <p className="text-muted mb-8">Start with a WhatsApp message and preview your business website before paying.</p>
+              <Link href="/contact" className="bg-accent px-8 py-4 rounded-lg hover:bg-brand-navy transition inline-block">
+                Build My Website
               </Link>
             </div>
           </div>
