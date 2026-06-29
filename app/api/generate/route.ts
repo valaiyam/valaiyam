@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { runAnalyzerAgent } from '@/agents/analyzer'
 import { buildPrompt } from '@/agents/prompt-builder'
-import { runGeneratorAgent } from '@/agents/generator'
+import { runGeneratorAgent, type GeneratedFile } from '@/agents/generator'
 import { runSecurityAgent } from '@/agents/security'
 import { runQAAgent } from '@/agents/qa'
 import { runDeploymentAgent } from '@/agents/deployment'
@@ -72,7 +72,7 @@ async function runPipeline(project: any) {
 
     // --- Agent 4: Generate (with retry) ---
     await setStatus(projectId, 'generating')
-    let generatedFiles = null
+    let generatedFiles: GeneratedFile[] | null = null
     let retries = 0
 
     while (retries < MAX_RETRIES) {
@@ -85,6 +85,8 @@ async function runPipeline(project: any) {
         if (retries >= MAX_RETRIES) throw new Error('Generator failed after max retries')
       }
     }
+
+    if (!generatedFiles) throw new Error('Generator produced no files')
 
     await supabase.from('projects').update({ generated_files: generatedFiles, retry_count: retries }).eq('id', projectId)
 
@@ -150,9 +152,4 @@ Please review it and reply to this email with:
 - Any changes you'd like
 - Or "Approved" if you're happy with it
 
-Once approved, we'll send you the payment link (₹4,999) and make your site live.
-
-— Valaiyam Team
-    `.trim()
-  })
-}
+Once 
